@@ -17,7 +17,7 @@ class AgentCardImage extends StatelessWidget {
   Center _imageIsNotExisting() {
     return const Center(
       child: CustomText(
-        txt: "\nNo image\n valipale \!",
+        txt: "\nNo image\n available \!",
         fotSize: 20,
         color: Colors.red,
       ),

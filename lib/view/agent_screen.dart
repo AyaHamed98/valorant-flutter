@@ -19,10 +19,10 @@ class AgentScreen extends StatelessWidget {
           create: (context) => AgentCubit(),
           child: BlocBuilder<AgentCubit,AgentState>(
             builder: (context, state) {
-              if(state is AgentsIsLoadingState){
-                return const AgentLoadingWidget() ;
+              if(state is AgentsLoadedState){
+                return AgentList(agents: AgentCubit.get(context).agents,) ;
               }
-              return AgentList(agents: AgentCubit.get(context).agents,) ;
+              return const AgentLoadingWidget() ;
             },
           ),
         ),
