@@ -9,12 +9,12 @@ class AgentCardImage extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return agentItem.bustPortrait != null
-        ? imageIsExisting(height)
-        : imageIsNotExisting();
+        ? _imageIsExisting(height)
+        : _imageIsNotExisting();
   }
 
 
-  Center imageIsNotExisting() {
+  Center _imageIsNotExisting() {
     return const Center(
       child: CustomText(
         txt: "\nNo image\n valipale \!",
@@ -24,7 +24,7 @@ class AgentCardImage extends StatelessWidget {
     );
   }
 
-  Padding imageIsExisting(double height) {
+  Padding _imageIsExisting(double height) {
     return Padding(
       padding:
       const EdgeInsetsDirectional.only(start: 50, bottom: 100),

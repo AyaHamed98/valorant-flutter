@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../custome_text.dart';
 
 class RoleScreenChildIsNotExisted extends StatelessWidget {
@@ -6,6 +7,10 @@ class RoleScreenChildIsNotExisted extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: CustomText(txt: "Sorry,There is no data",color: Colors.red,));
+    return const Center(
+        child: CustomText(
+      txt: "Sorry,There is no data",
+      color: Colors.red,
+    ));
   }
 }
