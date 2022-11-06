@@ -13,16 +13,20 @@ class AgentRepository{
     List<Agent>agent=[];
 
 
+  try{
     if(response.statusCode==200){
       Map<String,dynamic> responseBody=jsonDecode(response.body);
       for(var i in responseBody["data"]){
         agent.add(Agent.fromJson(i));
       }
-       return agent;
+      return agent;
 
     }else{
-     throw Exception("there are an exception");
+      throw Exception("status code = ${response.statusCode}");
     }
+  }catch(error){
+    throw Exception(error.toString());
+  }
 
   }
 

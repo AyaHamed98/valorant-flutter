@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../cubit/agent_screen_data/agant_screen_data_cubit.dart';
+import '../view_model/agent_view_model/agant_screen_data_cubit.dart';
 import '../widgets/aget_widgets/agent_list.dart';
 import 'agent_error_scren.dart';
 import 'agent_loadind_screen.dart';
