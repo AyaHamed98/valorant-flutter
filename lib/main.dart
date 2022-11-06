@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:valorant_app/repository/loacl_storage_helper/storage_firstopen.dart';
 import 'package:valorant_app/view/agent_screen.dart';
 import 'package:valorant_app/view/onbording_screen.dart';
 
-import 'helper/loacl_storage_helper/storage_firstopen.dart';
 
 
 void main() async{

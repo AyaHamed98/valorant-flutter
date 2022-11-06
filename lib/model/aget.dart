@@ -1,6 +1,6 @@
 import 'package:valorant_app/model/role.dart';
 
-import '../helper/extantion/extantionclass.dart';
+import '../helper/extantion/extantion_hexcolor.dart';
 
 class Agent {
   String displayName;

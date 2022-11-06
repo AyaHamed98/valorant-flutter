@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:valorant_app/model/aget.dart';
-import 'package:valorant_app/repository/agent_repository.dart';
+import 'package:valorant_app/repository/remote_repository/agent_repository.dart';
 part 'agant_screen_data_state.dart';
 
   class AgentCubit extends Cubit<AgentState> {
