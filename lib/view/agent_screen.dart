@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubit/agent_screen_data/agant_screen_data_cubit.dart';
 import '../widgets/aget_widgets/agent_list.dart';
+import 'agent_error_scren.dart';
 import 'agent_loadind_screen.dart';
 
 class AgentScreen extends StatelessWidget {
@@ -21,8 +22,15 @@ class AgentScreen extends StatelessWidget {
             builder: (context, state) {
               if(state is AgentsLoadedState){
                 return AgentList(agents: AgentCubit.get(context).agents,) ;
+              }else if(state is AgentsIsLoadingState){
+                return const AgentLoadingWidget();
+              }else if(state is AgentsIsErrorState){
+                return AgentErrorScreen(error: state.error);
+              }else{
+                return const SizedBox();
+
               }
-              return const AgentLoadingWidget() ;
+
             },
           ),
         ),

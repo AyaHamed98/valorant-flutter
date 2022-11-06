@@ -18,7 +18,9 @@ part 'agant_screen_data_state.dart';
     await AgentRepository().getAgentsData().then((agents){
       this.agents=agents;
       emit(AgentsLoadedState());
-    } );
+    } ).onError((error, stackTrace) {
+      emit(AgentsIsErrorState(error.toString()));
+    });
   }
 
 }
