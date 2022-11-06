@@ -10,16 +10,16 @@ class AgentRepository{
     String url="$baseUrl/v1/agents";
     Uri uri=Uri.parse(url);
     http.Response response= await http.get(uri);
-    List<Agent>agent=[];
+    List<Agent> agents=[];
 
 
   try{
     if(response.statusCode==200){
       Map<String,dynamic> responseBody=jsonDecode(response.body);
       for(var i in responseBody["data"]){
-        agent.add(Agent.fromJson(i));
+        agents.add(Agent.fromJson(i));
       }
-      return agent;
+      return agents;
 
     }else{
       throw Exception("status code = ${response.statusCode}");
