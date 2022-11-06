@@ -4,7 +4,7 @@ import 'package:valorant_app/view/agent_screen.dart';
 import 'package:valorant_app/widgets/custom_image.dart';
 import 'package:valorant_app/widgets/custome_text.dart';
 
-import '../helper/loacl_storage_helper/storage_firstopen.dart';
+import '../helper/loacl_storage/storage_firstopen.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
