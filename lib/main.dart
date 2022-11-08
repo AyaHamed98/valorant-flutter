@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:valorant_app/repository/local_storage/storage_firstopen.dart';
 import 'package:valorant_app/view/agent_screen.dart';
 import 'package:valorant_app/view/onbording_screen.dart';
 
@@ -17,11 +16,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isFirstOpen=GetStorage().read<bool>('firstOpen') ?? true;
 
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "valorant app",
-      home:FirstOpen().isFirstOpen()==true?const AgentScreen():const OnBoardingScreen() ,
+      home:isFirstOpen?const OnBoardingScreen():const AgentScreen() ,
     );
   }
 }

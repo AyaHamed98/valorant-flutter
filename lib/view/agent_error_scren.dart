@@ -14,7 +14,7 @@ class AgentErrorScreen extends StatelessWidget {
         onPressed: (){
           Navigator.pop(context);
         },
-        child:const CustomText(txt: "Exit the progrem",),
+        child:const CustomText(txt: "Exit",),
         style: ElevatedButton.styleFrom(
             fixedSize:const Size.fromWidth(double.infinity),
             primary: Colors.red

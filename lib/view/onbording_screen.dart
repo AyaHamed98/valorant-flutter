@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:valorant_app/view/agent_screen.dart';
 import 'package:valorant_app/widgets/custom_image.dart';
 import 'package:valorant_app/widgets/custome_text.dart';
 
-import '../helper/local_storage/storage_firstopen.dart';
+
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -75,7 +76,7 @@ class OnBoardingScreen extends StatelessWidget {
       activeShape: RoundedRectangleBorder(
         borderRadius: BorderRadiusDirectional.circular(width*.05 )
       )
-      
+
     );
   }
 
@@ -89,7 +90,7 @@ class OnBoardingScreen extends StatelessWidget {
   }
 
   void goToAgentScreen(context){
-    FirstOpen().saveFirstOpen();
+     GetStorage().write("firstOpen", false);
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const AgentScreen()));
   }
 
