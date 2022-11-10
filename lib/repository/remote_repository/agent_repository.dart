@@ -7,12 +7,11 @@ class AgentRepository{
 
 
  Future<List<Agent>>getAgentsData()async{
+
+   try{
     String url="$baseUrl/v1/agents";
     Uri uri=Uri.parse(url);
     List<Agent> agents=[];
-
-
-  try{
     http.Response response= await http.get(uri);
     if(response.statusCode==200){
       Map<String,dynamic> responseBody=jsonDecode(response.body);
